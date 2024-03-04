@@ -1,0 +1,68 @@
+name: 🚀 Feature Request
+title: "[FEAT] <my_title>"
+description: Suggest an idea for this project.
+labels: ["enhancement"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked other resources
+      description: |
+        Thank you for taking the time to bring this repository better.
+        感謝您花時間讓這個儲存庫變得更好。
+
+        Before submitting a bug report, please read the following instructions.
+        提交錯誤報告之前，請遵守以下說明。
+        
+        - I added a very descriptive title to this issue.
+          標題具有描述性。
+        - I used the GitHub search to find a similar question and didn't find it.
+          已使用 Github 搜尋類似問題但沒有找到。
+        - I've clearly described the feature request and motivation for it.
+          已經清楚地描述該功能請求和動機。
+      options:
+        - label: Confirm and check all the following options.
+          required: true
+
+  - type: textarea
+    id: feature-request
+    attributes:
+      label: Feature request
+      description: |
+        A clear and concise description of the feature proposal. Please provide links to any relevant GitHub repos, papers, or other resources if relevant
+        對功能提案的清晰簡潔的描述。請提供任何相關 GitHub 儲存庫、論文或其他相關資源的鏈接。
+
+        * Use code tags (e.g., ```python ... ```) to correctly [format your code](https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting).
+          使用 ``` 格式化程式碼幫助閱讀。
+        * Avoid screenshots when possible, as they are hard to read and (more importantly) don't allow others to copy-and-paste your code.
+          盡量避免使用螢幕截圖，因為難以閱讀且(更重要的是)不允許其他人複製和貼上程式碼。
+    validations:
+      required: True
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: |
+        Please outline the motivation for the proposal. Is your feature request related to a problem? e.g., I'm always frustrated when [...].
+        請概述該提案的動機。您的功能請求與問題相關嗎？例如，當[...]時總是感覺煩躁。
+        If this is related to another GitHub issue, please link here too.
+        如果這與另一個 GitHub 問題相關，也請連結到此處。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal (If applicable)
+      description: |
+        If you would like to propose a solution, please describe it here.
+        如果您想提出解決方案，請在此處描述。
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        Make sure you the label(s) for what platform you're running(if applicable).
+        請確保您已加入該專案所屬的硬體平台的標籤(如果適用)

@@ -1,0 +1,50 @@
+name: 📑 Test Report
+title: "[TEST] <my_title>"
+description: When adding missing tests
+labels: ["enhancement"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked other resources
+      description: |
+        Thank you for taking the time to write a unittest to make the repository more robust.
+        感謝您撰寫單元測試使專案更加強健。
+        
+        Before submitting a unittest, please read the following instructions.
+        提交單元測試之前，請遵守以下說明。
+        
+        - I added a very descriptive title to this issue.
+          標題具有描述性。
+      options:
+        - label: Confirm and check all the following options.
+          required: true
+  
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: |
+        Write a short description telling which function you are writing a unittest.
+        簡短的描述你為哪個函式撰寫單元測試。
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Provide information about your version, setup, and any other relevant environment details.
+        提供您的系統版本、設定和任何其他相關環境的詳細資訊。
+        * platform (i.g. windows / linux / mac)
+        * language version (i.g. python3.10 / c++14 / ...)
+        * package version
+    validations:
+      required: true
+      
+  - type: markdown
+    attributes:
+      value: |
+        Make sure you the label(s) for what platform you're running(if applicable).
+        請確保您已加入該專案所屬的硬體平台的標籤(如果適用)

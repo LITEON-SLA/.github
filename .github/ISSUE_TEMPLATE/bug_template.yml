@@ -1,0 +1,125 @@
+name: 🐛 Bug Report
+title: "[BUG] <my_title>"
+description: Report a bug. For questions, please use the GitHub Discussions
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked other resources
+      description: |
+        Thank you for taking the time to file a bug report.
+        感謝您填寫錯誤回報使專案變得更好。
+        
+        If you're not certain that your issue is due to a bug in this repository, please use GitHub Discussions to ask for help with your issue.
+        如果您不確定是否為程式錯誤，請使用 GitHub 討論區對此問題尋求協助。
+        
+        Before submitting a bug report, please read the following instructions.
+        提交錯誤報告之前，請遵守以下說明。
+        
+        - I added a very descriptive title to this issue.
+          標題具有描述性。
+        - I used the GitHub search to find a similar question and didn't find it.
+          已使用 Github 搜尋類似問題但沒有找到。
+        - I am sure that this is a bug rather than my code.
+          這是錯誤而非程式碼的問題。
+      options:
+        - label: Confirm and check all the following options.
+          required: true
+  
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: |
+        Write a short description telling what you are doing, and what is currently happening.
+        簡短的描述你正在做什麼但卻發生什麼。
+      placeholder: |
+        * I'm trying to use the `something` to do X.
+        * Instead, it does Y.
+    validations:
+      required: True
+
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected behaviour
+      description: |
+        Describe what you expected to happen.
+        簡短的描述你預期會產生的結果。
+      placeholder: |
+        * I expect to see Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    validations:
+      required: false
+    attributes:
+      label: Example Code
+      description: |
+        Please add a self-contained, [minimal, reproducible, example](https://stackoverflow.com/help/minimal-reproducible-example) with your use case.
+        請新增一個獨立的、最小的、可重現的範例。
+
+        If a maintainer can copy it, run it, and see it right away, there's a much higher chance that you'll be able to get help.
+        如果維護者可以複製、運行並立即看到結果，那麼獲得幫助的機會就會增加。
+
+        * Use code tags (e.g., ```python ... ```) to correctly [format your code](https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting).
+          使用 ``` 格式化程式碼幫助閱讀。
+        * Avoid screenshots when possible, as they are hard to read and (more importantly) don't allow others to copy-and-paste your code.
+          盡量避免使用螢幕截圖，因為難以閱讀且(更重要的是)不允許其他人複製和貼上程式碼。
+        
+        **If the result is more than a screenful of text or requires multiple files, please:**
+        **如果超過整個螢幕的顯示範圍或需要多個文件，請:**
+        * Provide a link to a new or existing public repository exhibiting the issue
+          提供導向該問題的存儲庫的連結。
+      placeholder: |        
+        ```python
+        def bad_code(inputs) -> int:
+            raise NotImplementedError('For demo purpose')
+        
+        if __name__ == "__main__":
+            bad_code
+        ```
+  - type: textarea
+    id: error
+    validations:
+      required: false
+    attributes:
+      label: Error Message and Stack Trace (if applicable)
+      description: |
+        If you are reporting an error, please include the full error message and stack trace.
+        如果是回報錯誤，請包含完整的錯誤訊息和堆疊追蹤
+      placeholder: |
+        Exception + full stack trace
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Provide information about your version, setup, and any other relevant environment details.
+        提供您的系統版本、設定和任何其他相關環境的詳細資訊。
+        * platform (i.g. windows / linux / mac)
+        * language version (i.g. python3.10 / c++14 / ...)
+        * package version
+    validations:
+      required: true
+
+  - type: textarea
+    id: further_information
+    attributes:
+      label: Further Information
+      description: |
+        Links? References? Anything that will give us more context about the issue you are encountering!
+        連結？參考？任何相關資訊都能讓我們更了解您遇到的問題！
+      render: shell
+    validations:
+      required: true
+      
+  - type: markdown
+    attributes:
+      value: |
+        Make sure you the label(s) for what platform you're running(if applicable).
+        請確保您已加入該專案所屬的硬體平台的標籤(如果適用)

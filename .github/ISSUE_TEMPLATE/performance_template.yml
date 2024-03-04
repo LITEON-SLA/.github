@@ -1,0 +1,67 @@
+name: 💯 Performance
+title: "[PERF] <my_title>"
+description: Contribute a code change that improves performance
+labels: ["enhancement"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked other resources
+      description: |
+        Thank you for taking the time to bring this repository better.
+        感謝您花時間讓這個儲存庫變得更好。
+        
+        Before submitting a performance report, please read the following instructions.
+        提交效能報告之前，請遵守以下說明。
+        
+        - I added a very descriptive title to this issue.
+          標題具有描述性。
+        - I've clearly described the performance measurement and analysis for it.
+          已經清楚地描述效能評測與分析。
+      options:
+        - label: Confirm and check all the following options.
+          required: true
+
+  - type: textarea
+    id: root-cause
+    attributes:
+      label: Root cause
+      description: |
+        Write a short description telling what needs to improve, and why.
+        簡短的描述哪裡需要改進，且為什麼需要改進。
+      placeholder: |
+        for-loop is the key to preventing parallel computation, ...
+        Instead, using vectorized computations can bring a considerable speedup.
+    validations:
+      required: True
+
+  - type: textarea
+    id: expected-behaviour
+    attributes:
+      label: Expected behaviour
+      description: |
+        Describe what you expected to happen with table.
+        使用表格和簡短描述，說明你預期會產生的結果。
+      placeholder: |
+        * After optimizing, I expect to see Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Provide information about your version, setup, and any other relevant environment details.
+        提供您的系統版本、設定和任何其他相關環境的詳細資訊。
+        * platform (i.g. windows / linux / mac)
+        * language version (i.g. python3.10 / c++14 / ...)
+        * package version
+    validations:
+      required: true
+      
+  - type: markdown
+    attributes:
+      value: |
+        Make sure you the label(s) for what platform you're running(if applicable).
+        請確保您已加入該專案所屬的硬體平台的標籤(如果適用)

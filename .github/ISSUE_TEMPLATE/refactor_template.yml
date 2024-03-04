@@ -1,0 +1,69 @@
+name: ✨ Refactor
+title: "[REFACTOR] <my_title>"
+description: Restructuring code, while not changing its original functionality.
+labels: ["enhancement"]
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checked other resources
+      description: |
+        Refactoring the code is a huge undertaking, thank you for your great contribution
+        重構程式碼是一項艱鉅的任務，感謝您做出的傑出貢獻。
+        
+        Before submitting, please read the following instructions.
+        提交之前，請遵守以下說明。
+        
+        - I added a very descriptive title to this issue.
+          標題具有描述性。
+        - I make sure my refactored code has the same output as before the modification.
+          請確保您重構後的程式碼與修改前的程式碼有相同的輸出。
+      options:
+        - label: Confirm and check all the following options.
+          required: true
+  
+  - type: textarea
+    id: before-and-after
+    attributes:
+      label: Before and after
+      description: |
+        Write a short description telling what you are doing.
+        簡短的描述你做了什麼。
+      placeholder: |
+        * Because all methods have the similar API, abstract the API and make all subclasses inherit from the parent class.
+    validations:
+      required: True
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Example Code (If applicable)
+      description: |
+        If applicable, please add a self-contained, [minimal, reproducible, example](https://stackoverflow.com/help/minimal-reproducible-example) with your use case.
+        如果適用，請新增一個獨立的、最小的、可重現的範例。
+
+        * Use code tags (e.g., ```python ... ```) to correctly [format your code](https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks#syntax-highlighting).
+          使用 ``` 格式化程式碼幫助閱讀。
+        * Avoid screenshots when possible, as they are hard to read and (more importantly) don't allow others to copy-and-paste your code.
+          盡量避免使用螢幕截圖，因為難以閱讀且(更重要的是)不允許其他人複製和貼上程式碼。
+    validations:
+      required: True
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        Provide information about your version, setup, and any other relevant environment details.
+        提供您的系統版本、設定和任何其他相關環境的詳細資訊。
+        * platform (i.g. windows / linux / mac)
+        * language version (i.g. python3.10 / c++14 / ...)
+        * package version
+    validations:
+      required: true
+      
+  - type: markdown
+    attributes:
+      value: |
+        Make sure you the label(s) for what platform you're running(if applicable).
+        請確保您已加入該專案所屬的硬體平台的標籤(如果適用)
